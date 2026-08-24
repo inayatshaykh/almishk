@@ -1,0 +1,400 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Al Mishk - Luxury Off-White Perfume Design System
+   Elegant, minimal, premium with gold accents
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Cinzel:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* Luxury Off-White Palette */
+    --background: 40 33% 97%;
+    --foreground: 0 0% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+
+    /* Royal Gold primary */
+    --primary: 43 56% 54%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Soft Beige secondary */
+    --secondary: 35 25% 91%;
+    --secondary-foreground: 0 0% 10%;
+
+    /* Muted tones */
+    --muted: 35 20% 93%;
+    --muted-foreground: 0 0% 40%;
+
+    /* Gold accent */
+    --accent: 43 56% 54%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 35 15% 88%;
+    --input: 35 15% 88%;
+    --ring: 43 56% 54%;
+
+    --radius: 1rem;
+
+    /* Custom luxury tokens */
+    --gold: 43 56% 54%;
+    --gold-light: 43 50% 65%;
+    --gold-dark: 43 60% 42%;
+    --ivory: 40 33% 97%;
+    --beige: 35 25% 91%;
+    --charcoal: 0 0% 10%;
+    --cream: 40 40% 95%;
+
+    /* Gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(43 56% 54%) 0%, hsl(43 50% 65%) 50%, hsl(43 60% 42%) 100%);
+    --gradient-light: linear-gradient(180deg, hsl(40 33% 97%) 0%, hsl(35 25% 93%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(40 30% 98%) 100%);
+    --gradient-shimmer: linear-gradient(90deg, transparent 0%, hsl(43 56% 54% / 0.15) 50%, transparent 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(40 33% 97%) 0%, hsl(35 25% 91%) 50%, hsl(40 30% 96%) 100%);
+
+    /* Shadows - Soft luxury */
+    --shadow-gold: 0 4px 20px -4px hsl(43 56% 54% / 0.2);
+    --shadow-lg: 0 10px 40px -10px hsl(0 0% 0% / 0.1);
+    --shadow-card: 0 4px 24px -8px hsl(0 0% 0% / 0.08);
+    --shadow-soft: 0 2px 16px -4px hsl(0 0% 0% / 0.06);
+    --shadow-hover: 0 8px 32px -8px hsl(43 56% 54% / 0.25);
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 10%;
+    --sidebar-primary: 43 56% 54%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 35 25% 93%;
+    --sidebar-accent-foreground: 0 0% 10%;
+    --sidebar-border: 35 15% 88%;
+    --sidebar-ring: 43 56% 54%;
+  }
+
+  /* Dark mode - keeping for admin panel */
+  .dark {
+    --background: 20 14% 4%;
+    --foreground: 40 30% 92%;
+
+    --card: 20 12% 7%;
+    --card-foreground: 40 30% 92%;
+
+    --popover: 20 12% 7%;
+    --popover-foreground: 40 30% 92%;
+
+    --primary: 43 56% 54%;
+    --primary-foreground: 0 0% 10%;
+
+    --secondary: 20 8% 12%;
+    --secondary-foreground: 40 30% 92%;
+
+    --muted: 20 8% 15%;
+    --muted-foreground: 40 10% 55%;
+
+    --accent: 43 40% 25%;
+    --accent-foreground: 40 30% 92%;
+
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 40 30% 92%;
+
+    --border: 20 10% 18%;
+    --input: 20 10% 18%;
+    --ring: 43 56% 54%;
+
+    --sidebar-background: 20 12% 6%;
+    --sidebar-foreground: 40 30% 92%;
+    --sidebar-primary: 43 56% 54%;
+    --sidebar-primary-foreground: 20 14% 4%;
+    --sidebar-accent: 20 8% 12%;
+    --sidebar-accent-foreground: 40 30% 92%;
+    --sidebar-border: 20 10% 15%;
+    --sidebar-ring: 43 56% 54%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Poppins', 'Montserrat', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', 'Cinzel', serif;
+    @apply font-medium tracking-wide;
+  }
+}
+
+@layer components {
+  /* Luxury text styles */
+  .text-display {
+    font-family: 'Playfair Display', serif;
+    @apply text-5xl md:text-7xl font-light tracking-wide;
+  }
+
+  .text-headline {
+    font-family: 'Playfair Display', serif;
+    @apply text-3xl md:text-4xl font-medium tracking-wide;
+  }
+
+  .text-subhead {
+    font-family: 'Poppins', sans-serif;
+    @apply text-sm uppercase tracking-[0.2em] font-medium;
+  }
+
+  /* Luxury gold text */
+  .text-gold {
+    @apply text-primary;
+  }
+
+  .text-gradient-gold {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Luxury borders */
+  .border-gold {
+    @apply border-primary/40;
+  }
+
+  .border-gradient-gold {
+    border-image: var(--gradient-gold) 1;
+  }
+
+  /* Luxury cards - Off-white style */
+  .card-luxury {
+    background: var(--gradient-card);
+    @apply border border-primary/20 rounded-2xl transition-all duration-300;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .card-luxury:hover {
+    box-shadow: var(--shadow-hover);
+    @apply border-primary/40;
+    transform: translateY(-4px);
+  }
+
+  /* Glassmorphism effect */
+  .glass {
+    background: hsl(0 0% 100% / 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    @apply border border-primary/10;
+  }
+
+  /* Gold shimmer animation */
+  .shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shimmer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-shimmer);
+    animation: shimmer 3s infinite;
+  }
+
+  @keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+  }
+
+  /* Elegant divider */
+  .divider-gold {
+    @apply h-px w-full;
+    background: linear-gradient(90deg, transparent, hsl(var(--primary)) 50%, transparent);
+  }
+
+  /* Admin sidebar styles - dark theme for admin */
+  .admin-sidebar {
+    background: linear-gradient(180deg, hsl(20 12% 6%) 0%, hsl(20 10% 4%) 100%);
+  }
+
+  /* Premium button styles */
+  .btn-luxury {
+    @apply relative overflow-hidden bg-primary text-primary-foreground font-medium rounded-xl px-6 py-3 transition-all duration-300;
+    box-shadow: var(--shadow-gold);
+  }
+
+  .btn-luxury:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
+  }
+
+  .btn-luxury::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, hsl(0 0% 100% / 0.2), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .btn-luxury:hover::before {
+    left: 100%;
+  }
+
+  /* Outline luxury button */
+  .btn-outline-luxury {
+    @apply relative overflow-hidden bg-transparent border-2 border-primary text-primary font-medium rounded-xl px-6 py-3 transition-all duration-300;
+  }
+
+  .btn-outline-luxury:hover {
+    @apply bg-primary text-primary-foreground;
+    box-shadow: var(--shadow-gold);
+  }
+
+  /* Section styling */
+  .section-luxury {
+    @apply py-16 md:py-20 px-4;
+    background: var(--gradient-light);
+  }
+
+  /* Hero section */
+  .hero-luxury {
+    background: var(--gradient-hero);
+    @apply relative overflow-hidden;
+  }
+
+  /* Status badges */
+  .badge-success {
+    @apply bg-emerald-50 text-emerald-700 border border-emerald-200;
+  }
+
+  .badge-warning {
+    @apply bg-amber-50 text-amber-700 border border-amber-200;
+  }
+
+  .badge-danger {
+    @apply bg-red-50 text-red-700 border border-red-200;
+  }
+
+  .badge-info {
+    @apply bg-sky-50 text-sky-700 border border-sky-200;
+  }
+
+  .badge-gold {
+    @apply bg-primary/10 text-primary border border-primary/30;
+  }
+
+  /* Trust badge */
+  .trust-badge {
+    @apply flex flex-col items-center gap-3 p-6 rounded-2xl bg-card border border-primary/20 transition-all duration-300;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .trust-badge:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-4px);
+  }
+}
+
+@layer utilities {
+  /* Hide scrollbar but keep functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Custom scrollbar for luxury feel */
+  .scrollbar-luxury {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--primary) / 0.3) transparent;
+  }
+
+  .scrollbar-luxury::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .scrollbar-luxury::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-luxury::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary) / 0.3);
+    border-radius: 3px;
+  }
+
+  .scrollbar-luxury::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary) / 0.5);
+  }
+
+  /* Animation utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.4s ease-out;
+  }
+
+  @keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  /* Hover lift animation */
+  .hover-lift {
+    @apply transition-all duration-300;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  /* Scroll fade in animation */
+  .scroll-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: scrollFadeIn 0.6s ease-out forwards;
+  }
+
+  @keyframes scrollFadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
