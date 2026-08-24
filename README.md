@@ -1,8 +1,11 @@
-# Welcome to your Lovable project
+# Al-Mishk - Luxury Perfume E-Commerce
+
+A premium perfume e-commerce platform built with React, TypeScript, Vite, and Supabase.
 
 ## Project info
 
 **URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+**Repository**: https://github.com/inayatshaykh/almishk
 
 ## How can I edit this code?
 
