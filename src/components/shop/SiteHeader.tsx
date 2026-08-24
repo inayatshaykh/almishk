@@ -211,14 +211,12 @@ const SiteHeader = ({ searchQuery = '', onSearchChange }: SiteHeaderProps) => {
           <div className="h-14 md:h-20 flex items-center justify-between gap-2 md:gap-4">
 
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-2 md:gap-3 shrink-0">
-              <div className="w-9 h-9 md:w-12 md:h-12 rounded-full bg-gradient-gold flex items-center justify-center shadow-gold">
-                <span className="text-base md:text-xl font-display text-white font-bold">A</span>
-              </div>
-              <div className="hidden sm:block">
-                <span className="text-xl md:text-2xl font-serif text-gradient-gold tracking-wide">Al Mishk</span>
-                <p className="text-xs text-muted-foreground -mt-1">Premium Attars</p>
-              </div>
+            <Link to="/" className="flex items-center shrink-0">
+              <img
+                src="/logo.jpg"
+                alt="Al Mishk"
+                className="h-10 md:h-14 w-auto object-contain mix-blend-multiply"
+              />
             </Link>
 
             {/* Desktop Search */}
@@ -309,14 +307,12 @@ const SiteHeader = ({ searchQuery = '', onSearchChange }: SiteHeaderProps) => {
                 <SheetContent side="right" className="w-[85vw] max-w-sm bg-background border-l border-primary/20 p-0 overflow-y-auto">
                   <div className="flex flex-col h-full">
                     <div className="p-5 border-b border-primary/10">
-                      <button className="flex items-center gap-3 w-full text-left" onClick={() => { setMobileMenuOpen(false); navigate('/'); }}>
-                        <div className="w-10 h-10 rounded-full bg-gradient-gold flex items-center justify-center shadow-gold flex-shrink-0">
-                          <span className="text-lg font-display text-white font-bold">A</span>
-                        </div>
-                        <div>
-                          <span className="text-xl font-serif text-gradient-gold">Al Mishk</span>
-                          <p className="text-xs text-muted-foreground">Premium Attars</p>
-                        </div>
+                      <button className="flex items-center w-full text-left" onClick={() => { setMobileMenuOpen(false); navigate('/'); }}>
+                        <img
+                          src="/logo.jpg"
+                          alt="Al Mishk"
+                          className="h-12 w-auto object-contain mix-blend-multiply"
+                        />
                       </button>
                     </div>
 
